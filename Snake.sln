@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SnakeWPF", "SnakeWPF\SnakeWPF.csproj", "{4C3F2882-60F0-43A0-925B-69AB5EB4D31A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Snake.Domain", "Snake.Domain\Snake.Domain.csproj", "{C7DF87EF-9FCA-41FE-A572-4595C28E3913}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C3F2882-60F0-43A0-925B-69AB5EB4D31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C3F2882-60F0-43A0-925B-69AB5EB4D31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C3F2882-60F0-43A0-925B-69AB5EB4D31A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C3F2882-60F0-43A0-925B-69AB5EB4D31A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7DF87EF-9FCA-41FE-A572-4595C28E3913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7DF87EF-9FCA-41FE-A572-4595C28E3913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7DF87EF-9FCA-41FE-A572-4595C28E3913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7DF87EF-9FCA-41FE-A572-4595C28E3913}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD517946-5B89-440B-BE5C-7A7D1DDE5DCF}
+	EndGlobalSection
+EndGlobal
