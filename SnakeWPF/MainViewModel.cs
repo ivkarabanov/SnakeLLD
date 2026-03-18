@@ -5,7 +5,6 @@ using Snake.Domain.Direction;
 using Snake.Domain.Enum;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Linq;
 using System.Windows.Input;
 
@@ -13,7 +12,7 @@ namespace SnakeWPF
 {
     public class MainViewModel: ObservableObject
     {
-        private SnakeOperator _snakeOperator;
+        private Game _snakeOperator;
 
         public MainViewModel()
         {
@@ -116,7 +115,7 @@ namespace SnakeWPF
             CalculatePixelSizes();
             if (_snakeOperator == null)
             {
-                _snakeOperator = new SnakeOperator();                
+                _snakeOperator = new Game();                
                 _snakeOperator.SnakeMoved += Recalculate;
             }
             _snakeOperator.CreateSnake(Width, Height, InitialSnakeLength);
@@ -124,7 +123,7 @@ namespace SnakeWPF
             IsGameOver = false;
         }
 
-        private void Recalculate(GameInfo gameInfo, Snake.Domain.Snake snake)
+        private void Recalculate(Snake.Domain.Snake snake)
         {
             if (snake.MoveState == MoveStates.Crashed)
             {
@@ -134,8 +133,8 @@ namespace SnakeWPF
             var parts = snake.SnakeParts.Select(p => new Coordinates(p.X * _boxSideLength, p.Y * _boxSideLength));
             SnakeParts = new List<Coordinates>(parts);
 
-            Score = gameInfo.Score;
-            SnakeLength = gameInfo.SnakeLength;
+            Score = _snakeOperator.Score;
+            SnakeLength = _snakeOperator.SnakeLength;
         }
 
         public ICommand StopCommand { get; }

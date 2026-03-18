@@ -81,7 +81,7 @@
             <Border Grid.Row="1"
                 Background="#80000000"
                 Visibility="{Binding IsGameOver, Converter={StaticResource BooleanToVisibilityConverter}}"
-                Opacity="0.8"  
+                Opacity="0.9"  
                 Panel.ZIndex="100"> 
                 <TextBlock
                     Text="GAME OVER"

@@ -34,7 +34,7 @@ namespace Snake.Domain
             return coordinates;
         }
 
-        public Coordinates Calculate(Coordinates headCoordinates, Directions direction)
+        public Coordinates GetNewHead(Coordinates headCoordinates, Directions direction)
         {
             Coordinates nextStepCoordinates = new Coordinates(headCoordinates);
             switch (direction)

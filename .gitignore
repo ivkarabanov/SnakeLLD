@@ -3,3 +3,5 @@
 /SnakeWPF/bin/Debug/net7.0-windows
 /Snake.Domain/bin/Debug/net7.0
 /SnakeWPF/*.user
+/Snake.Domain.Tests/obj
+/Snake.Domain/bin/Debug/net7.0-windows

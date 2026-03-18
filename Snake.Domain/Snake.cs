@@ -5,6 +5,8 @@ namespace Snake.Domain
 {
     public sealed class Snake
     {
+        private const int StepToGrow = 3;
+
         private int _stepNumber;
         private MoveStates _moveState;
         private Directions _currentDirection;
@@ -72,8 +74,7 @@ namespace Snake.Domain
             bool isCrashed = false;
             foreach(var snakePart in _snakeParts.SkipLast(1))
             {
-                if (snakePart.X == newHead.X &&
-                    snakePart.Y == newHead.Y) 
+                if (snakePart == newHead) 
                 { 
                     isCrashed = true; 
                     break; 
@@ -87,7 +88,7 @@ namespace Snake.Domain
         /// </summary>
         private void MoveTail()
         {
-            if (_stepNumber % 3 != 0)
+            if (_stepNumber % StepToGrow != 0)
             {
                 _snakeParts.RemoveFirst();
             }

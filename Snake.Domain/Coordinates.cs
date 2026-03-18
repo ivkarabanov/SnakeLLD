@@ -1,6 +1,6 @@
 ﻿namespace Snake.Domain
 {
-    public struct Coordinates
+    public struct Coordinates 
     {
         public Coordinates()
         {            
@@ -20,5 +20,11 @@
 
         public int X { get; set; }
         public int Y { get; set; }
+
+        public static bool operator ==(Coordinates left, Coordinates right)
+                => left.Equals(right);
+        public static bool operator !=(Coordinates left, Coordinates right)
+        => !left.Equals(right);
+
     }
 }
